@@ -1,0 +1,40 @@
+### 
+# 添加新的证书
+###
+POST http://localhost:8787/v1/certs/test.domain HTTP/1.1
+Content-Type: application/json
+Authorization: srUum7XuVZxyfseDvpQJ
+
+{
+  "cert": "this is a test cert",
+  "chain": "this is a test chain",
+  "fullchain": "this is a test fullchain",
+  "privkey": "this is a test privkey"
+}
+
+###
+# 查询已存在的证书
+###
+GET http://localhost:8787/v1/certs/test.domain HTTP/1.1
+Authorization: srUum7XuVZxyfseDvpQJ
+
+
+###
+# 修改已存在的证书 
+###
+PUT http://localhost:8787/v1/certs/test.domain
+Content-Type: application/json
+Authorization: srUum7XuVZxyfseDvpQJ
+
+{
+  "cert": "this is a moded test cert",
+  "chain": "this is a moded test chain",
+  "fullchain": "this is a moded test fullchain",
+  "privkey": "this is a moded test privkey"
+}
+
+###
+# 删除已存在的证书
+###
+DELETE http://localhost:8787/v1/certs/test.domain HTTP/1.1
+Authorization: srUum7XuVZxyfseDvpQJ

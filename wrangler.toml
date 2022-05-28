@@ -1,0 +1,7 @@
+name = "certs-sync"
+compatibility_date = "2022-05-25"
+main = "src/index.ts"
+
+kv_namespaces = [
+  { binding = "CERT_SYNC_KV",id = "99c2ce0ca90e4fccab55e66f7fb25109", preview_id = "81b2af5ac296406185fb16b35a6e8bf5" }
+]
